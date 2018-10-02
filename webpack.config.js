@@ -29,7 +29,7 @@ module.exports = {
                       loader: 'sass-loader',
                       options: {
                           sourceMap: true,
-                          outputStyle: 'expanded'
+                          outputStyle: 'minimize'
                       }
                   }
                 ],
@@ -78,7 +78,7 @@ plugins: [
     new HtmlWebpackPlugin({
         title: '',
         minify: {
-            collapseWhitespace: false
+            collapseWhitespace: true
         },
         hash: true,
         template: 'index.html',

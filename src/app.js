@@ -3,7 +3,7 @@ const css = require('../scss/main.scss');
 $(function(){
 
 
-    //wywołanie menu
+    // menu
     $(".icon").click(function(){
 
         $(this).toggleClass("active");
@@ -21,7 +21,7 @@ $(function(){
     })
 
 
-    //zamykanie manu
+    //close manu
     $(".close, nav a").click(function(){
 
         $(".icon").removeClass("active");
