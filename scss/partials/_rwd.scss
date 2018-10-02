@@ -1,0 +1,108 @@
+@include mq(desktop, max) {
+
+    .main{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    section#aktualnosci .box .right{
+        font-size: 14px;
+    }
+}
+
+@include mq(tablet-wide, max) {
+
+    .button{
+        margin-top: 15px;
+    }
+}
+
+
+@include mq(tablet, max) {
+
+
+
+    section#oferta #content{
+        display: block;
+    }
+
+    .left, .right{
+        clear: both;
+        float: left;
+        width: 100%;
+    }
+
+    section#oferta #content .social{
+        clear: both;
+        float: left;
+        width: 100%;
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+
+    section#oferta #content .right h3{
+        margin-top: 0px;
+    }
+
+    section#aktualnosci .box .right {
+
+        font-size: 11px;
+    }
+
+    section#home h1 span{
+        margin-left: 5px;
+    }
+}
+
+@include mq(phone-wide, max) {
+
+    h2{
+        margin: 20px 0px;
+        font-size: 5vw;
+
+        span{
+            font-size: 2vw;
+        }
+    }
+
+    section#oferta #content .left div{
+        width: 100%;
+        height: auto;
+    }
+
+    section#aktualnosci .box{
+        flex-direction: column;
+        height: auto;
+        display: block;
+        clear: both;
+        float: left;
+        width: 100%;
+    }
+
+    section#aktualnosci .box .left{
+        overflow: visible;
+        height: 300px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    section#aktualnosci{
+        height: auto;
+    }
+
+    section#aktualnosci .box .left.slideshow{
+        width: 100%;
+    }
+}
+
+@include mq(phone, max) {
+
+    nav{
+        background: blue;
+    }
+}
+

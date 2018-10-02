@@ -1,0 +1,211 @@
+//progi responsywności
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   560px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1280px,
+    "desktop-wide": 1440px
+);
+
+
+@mixin mq($width, $type: min) {
+
+    @if map_has_key($breakpoints, $width) {
+
+        $width: map_get($breakpoints, $width);
+
+        @if $type == max {
+            $width: $width - 1px;
+        }
+
+        @media all and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+//odpalenie na danym elemencie progu
+//
+//
+//    @include mq(tablet, max) {
+//      nav{
+//         width: 100%;
+//      }
+//    }
+//
+
+//pseudoelementy
+
+@mixin ps($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+
+}
+
+//section:after {
+//   @include ps;
+//}
+
+//fonty
+@mixin font($size: false, $colour: false, $weight: false,  $line: false) {
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $line { line-height: $line; }
+}
+
+//p{
+//   @include font(20px, red, 700);
+//}
+
+//graienty
+@mixin gradient($start-color, $end-color, $orientation) {
+
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+  }
+
+//article{
+// @include gradient(rgb(170, 40, 40), #571397, ver);
+//}
+
+//wysrodkowywanie w pionie i poziomie
+
+@mixin center($position) {
+    position: absolute;
+
+    @if $position == 'vertical' {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    @else if $position == 'horizontal' {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translate(-50%);
+    }
+    @else if $position == 'both' {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+//.box{
+//     @include center(both/horizontal/vertical);
+//}
+
+//strzałka w lewo
+
+@mixin arrow($direction, $size, $color) {
+    width: 0;
+    height: 0;
+    @if ($direction == left) {
+       border-top: $size solid transparent;
+       border-bottom: $size solid transparent;
+       border-right: $size solid $color;
+    }
+    @else if ($direction == right) {
+       border-top: $size solid transparent;
+       border-bottom: $size solid transparent;
+       border-left: $size solid $color;
+    }
+    @else if ($direction == down) {
+       border-left: $size solid transparent;
+       border-right: $size solid transparent;
+       border-top: $size solid $color;
+    }
+    @else {
+       border-left: $size solid transparent;
+       border-right: $size solid transparent;
+       border-bottom: $size solid $color;
+    }
+ }
+
+ //span {
+//  @include arrow(left, 50px, #000);
+ //
+ //}
+
+
+ //generowanie trójkąta w różnych kierunkach
+
+ @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+//.triangle {
+//    @include css-triangle(red, up, 100px);
+//}
+
+//Automatyczne dodanie prefixów do keyframes.
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+}
+
+/*
+span {
+    @include keyframes(animate) {
+      50% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(-90deg);
+      }
+    }
+}
+*/

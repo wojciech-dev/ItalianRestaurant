@@ -1,0 +1,33 @@
+section#kontakt{
+    background-image: url(../img/kontakt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    input[type=text],textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: none;
+        background: $czarny-przezroczysty;
+        color: $bialy;
+        opacity: 1 !important;
+        border: none;
+    }
+
+    input[type=submit] {
+        background-color: $kolor-wiodacy;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        float: right;
+    }
+
+    input[type=submit]:hover {
+        background-color: $jasny-szary;
+        color: $kolor-wiodacy;
+    }
+}
