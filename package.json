@@ -1,7 +1,7 @@
 {
-  "name": "webpack_new_starter",
+  "name": "ItalianRestaurant",
   "version": "1.0.0",
-  "description": "starter",
+  "description": "restaurant site",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
@@ -10,7 +10,7 @@
     "clean": "rimraf dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "wk",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.4",
