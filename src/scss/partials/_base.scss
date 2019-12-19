@@ -1,0 +1,37 @@
+body {
+  font-family: $font-primary;
+  @include font(16px, $basic-text-color, 400, normal);
+
+  @include media-queries(tablet, max) {
+    @include font(14px, null, null);
+  }
+}
+
+h1 {
+  display: block;
+  @include font(42px, $basic-layout-color, 700);
+  @include margin-padding(null, null, all, 20px 0px);
+  text-transform: uppercase;
+  text-align: center;
+
+  @include media-queries(tablet, max) {
+    @include font(32px, null, null);
+    @include margin-padding(null, null, all, 10px 0px);
+  }
+
+  @include media-queries(phone-wide, max) {
+    @include font(26px, null, null);
+    @include margin-padding(null, null, all, 10px 0px);
+  }
+}
+
+section {
+  @include margin-padding(null, null, all, 20px 0px);
+}
+
+.sl-wrapper .sl-counter {
+  left: 50%;
+  top: auto;
+  bottom: 20px;
+  margin-left: -15px;
+}

@@ -1,0 +1,74 @@
+.nav {
+  @include position(fixed, $top: 0px, $left: -100%);
+  @include size(100%, 100vh);
+  @include transition(.9s);
+  clip-path: polygon(0% 0%, 100% 0, 0% 100%, 0% 100%);
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 9;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: space-around;
+
+  .nav_item {
+    text-align: center;
+
+    .nav_link {
+      @include position(relative, $top: 0px, $left: 0px);
+      @include font(24px, $white-color, 700);
+      text-decoration: none;
+
+      @include media-queries(tablet-wide, max) {
+        @include font(18px, null, null);
+      }
+
+
+      &:before {
+        content: "";
+        @include position(absolute, $left: 0px, $bottom: -10px);
+        @include size(100%, 2px);
+        background-color: $white-color;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all .3s ease-in-out 0s;
+      }
+
+      &:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+
+      &.act:after {
+        content: "";
+        @include position(absolute, $left: 0px, $bottom: -10px);
+        @include size(100%, 2px);
+        background: $white-color;
+      }
+    }
+  }
+
+  &.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    left: 0px;
+  }
+}
+
+.logo {
+  @include size(200px, 177px);
+  @include background-image("../images/logo.png");
+  display: block;
+  text-indent: -9999em;
+
+  &-center {
+    @include centerer;
+    top: 35%;
+
+    @include media-queries(desktop, max) {
+      top: 100px;
+    }
+
+
+  }
+}

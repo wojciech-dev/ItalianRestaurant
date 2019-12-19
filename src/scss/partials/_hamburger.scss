@@ -1,0 +1,42 @@
+.hamburger {
+  @include size(50px, 50px);
+  @include position(fixed, $top: 20px, $left: 20px);
+  @include transition(.4s);
+  @include background-image("../images/rwd.png");
+  cursor: pointer;
+  text-indent: -9999em;
+  z-index: 10;
+
+  &:before,
+  &:after {
+    content: "";
+    @include position(absolute, $top: 0, $left: 0);
+    @include size(50px, 6px);
+    background-color: $hamburger-color;
+    @include transition(.4s);
+  }
+
+  &:before {
+    top: 0px;
+  }
+
+  &:after {
+    top: 32px;
+  }
+
+
+  &.active {
+    background: transparent;
+  }
+
+  &.active:before,
+  &.active:after {
+    top: 15px;
+    transform: rotate(45deg);
+    background: $basic-layout-color;
+  }
+
+  &.active:after {
+    transform: rotate(135deg);
+  }
+}

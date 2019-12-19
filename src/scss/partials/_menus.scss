@@ -1,0 +1,80 @@
+.menus {
+  @include background-image("../images/bg2.jpg");
+  @include size(100%, auto);
+  @include margin-padding(null, null, all, 20px);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  .mebus_bg {
+    @include margin-padding(null, null, all, 20px);
+    background-color: $menus-color;
+
+    .menus_wrapper {
+      @include flexbox();
+      @include justify-content(space-between);
+
+      @include media-queries(tablet, max) {
+        @include flex-direction(column);
+      }
+
+      .menus_category {
+        flex: 1;
+        @include margin-padding(bottom, 20px, right, 20px);
+        border-right: 1px solid $border-color;
+
+        .menus_name {
+          @include margin-padding(bottom, 10px, null, null);
+        }
+
+        .menus_desc {
+          @include flexbox;
+          @include flex-direction(column);
+
+          .navbar__item {
+            @include margin-padding(bottom, 5px, all, 10px);
+            @include font(18px, $basic-text-color);
+            @include transition(.4s);
+            border-left: 5px solid $basic-layout-color;
+            text-decoration: none;
+
+            &.active,
+            &:hover {
+              background: $basic-layout-color;
+              color: $white-color;
+            }
+          }
+        }
+      }
+
+      .menus_content {
+        flex: 5;
+        @include flexbox;
+        @include flex-wrap(wrap);
+
+        @include media-queries(tablet, max) {
+          @include flex-direction(column);
+        }
+
+
+        .dish {
+          flex-basis: 50%;
+          @include margin-padding(null, null, all, 20px);
+
+          @include media-queries(tablet, max) {
+            @include margin-padding(null, null, all, 0px 20px 20px 0px);
+          }
+
+          &_name {
+            @include font(24px, null, 700);
+            @include margin-padding(bottom, 10px, null, null);
+
+            @include media-queries(tablet, max) {
+              @include font(18px, null, null);
+            }
+          }
+        }
+      }
+    }
+  }
+}

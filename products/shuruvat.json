@@ -1,0 +1,86 @@
+[{
+    "id": 1,
+    "title": "Bhalla Papri Chaat",
+    "body": "Savoury dumplings topped with crisp gram flour flakes, assorted chutneys and yoghurt."
+  },
+  {
+    "id": 2,
+    "title": "Onion Bhaji",
+    "body": "Onion coated in a mildly spiced gram flour batter, deep fried and served with tamarind chutney."
+  },
+  {
+    "id": 3,
+    "title": "Gol Guppe",
+    "body": "A popular street snack of India. Hollow crisp poori filled with tangy, spicy chutneys."
+  },
+  {
+    "id": 4,
+    "title": "agra Pattice",
+    "body": "Pan fried potato cakes stuffed with grated cottage cheese, topped with chickpeas and hung yoghurt."
+  },
+  {
+    "id": 5,
+    "title": "Jaipuri Bhindi",
+    "body": "Shredded okra marinated in batter of gram flour and species , fried until crisp."
+  },
+  {
+    "id": 6,
+    "title": "Achari Murgh",
+    "body": "Chunks of chicken marinated in traditional North Indian pickling spices and grilled to perfection."
+  },
+  {
+    "id": 7,
+    "title": "Chilli Garlic Chicken",
+    "body": "A spicy preparation of boneless chicken stir-fried. Indian soul food."
+  },
+  {
+    "id": 8,
+    "title": "Shami Kebab",
+    "body": "Pan grilled kebabs of ground lamb and lentils, stuffed with coriander chutney."
+  },
+  {
+    "id": 10,
+    "title": "Shrimp Peri Peri",
+    "body": "Shrimps stir fried with spring onions, red and green peppers."
+  },
+  {
+    "id": 11,
+    "title": "Wada Pao",
+    "body": "Potato patty in bun with coriander chutney and red chilli flakes."
+  },
+  {
+    "id": 12,
+    "title": "Punjabi Samosa",
+    "body": "Crisp flour patties filled with choice of mashed vegetables, served with tamarind chutney."
+  },
+  {
+    "id": 13,
+    "title": "Dahi Batata Puri",
+    "body": "Lentil puffs with a tangy mixture of potatoes and black peas, finished with sweetened yoghurt, mint and tamarind chutney."
+  },
+  {
+    "id": 14,
+    "title": "Chole Bhature",
+    "body": "A traditional fried bread served with spicy chickpeas and chopped red onions."
+  },
+  {
+    "id": 14,
+    "title": "Chilli Paneer",
+    "body": "Cubes of cottage cheese in chilli garlic sauce and finished with chopped spring onions."
+  },
+  {
+    "id": 15,
+    "title": "Murgh Kaleji Masala",
+    "body": "Chicken liver sauteed with onion, tomato, cumin seeds and coriander."
+  },
+  {
+    "id": 16,
+    "title": "Kheema Samosa",
+    "body": "Spicy lamb mince cooked with chopped celery, stuffed in a savory pastry fried until crisp."
+  },
+  {
+    "id": 15,
+    "title": "Amritsari Macchi",
+    "body": "Batter fried fish, marinated in lime and caraway seeds, served on a bed of spicy chutney."
+  }
+]

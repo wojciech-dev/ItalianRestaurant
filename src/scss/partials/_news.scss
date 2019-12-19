@@ -1,0 +1,70 @@
+.news_content {
+  @include margin-padding(null, null, all, 0px 20px 300px 20px);
+  @include background-image("../images/bg3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  @include media-queries(tablet, max) {
+    @include margin-padding(null, null, bottom, 100px);
+  }
+
+  .news {
+    @include flexbox;
+    @include margin-padding(bottom, 20px, null, null);
+    @include margin-padding(null, null, all, 20px);
+    background-color: $white-color;
+
+    @include media-queries(tablet, max) {
+      @include flex-direction(column);
+    }
+
+    .news_photo {
+      @include margin-padding(bottom, 20px, null, null);
+      flex: 1;
+    }
+
+    &_img {
+      max-width: 100%;
+    }
+
+    &_desc {
+      @include margin-padding(null, null, left, 20px);
+      flex: 2;
+      line-height: 24px;
+
+      @include media-queries(tablet, max) {
+        @include margin-padding(null, null, left, 0);
+      }
+
+      .news_name {
+        @include font(26px, $header-color, 900);
+        @include margin-padding(bottom, 20px, null, null);
+
+        @include media-queries(tablet, max) {
+          @include font(20px, null, null);
+        }
+      }
+
+      ul {
+        display: block;
+        line-height: 30px;
+        @include margin-padding(all, 20px 0px, null, null);
+
+        li {
+          list-style: circle;
+          @include margin-padding(left, 40px, null, null);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      @include flex-direction(row-reverse);
+      @include margin-padding(null, null, left, 0);
+
+      @include media-queries(tablet, max) {
+        @include margin-padding(null, null, left, 20px);
+        @include flex-direction(column);
+      }
+    }
+  }
+}

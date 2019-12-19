@@ -1,0 +1,6 @@
+.footer {
+  background-color: $footer-color;
+  @include font(14px, $white-color);
+  text-align: center;
+  @include margin-padding(null, null, all, 10px 0px);
+}

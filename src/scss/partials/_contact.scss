@@ -1,0 +1,116 @@
+.contact_wrapper {
+  @include flexbox;
+  @include justify-content(space-between);
+
+  @include media-queries(tablet-wide, max) {
+    @include flex-direction(column);
+  }
+
+  .contact_header {
+    @include font(26px, null, 900);
+    @include margin-padding(bottom, 20px, null, null);
+
+    @include media-queries(tablet, max) {
+      @include font(20px, null, null);
+    }
+  }
+
+  .adress {
+    @include font(22px, null, null, 34px);
+    @include align-self(center);
+    text-align: center;
+
+    @include media-queries(tablet, max) {
+      @include font(14px, null, null);
+    }
+
+    .social {
+      @include font(36px, $basic-layout-color);
+      @include margin-padding(all, 40px 0px, null, null);
+      cursor: pointer;
+
+      i {
+        @include transition(.4s);
+
+        &:hover {
+          color: $basic-text-color;
+        }
+      }
+    }
+  }
+
+  .form_input,
+  .form_input-area {
+    @include size(100%, 50px);
+    @include margin-padding(bottom, 10px, left, 10px);
+    @include font(14px, null, null);
+    @include box-shadow(0, 0, 5px, $border-shadow-color, $inset: false);
+    display: block;
+    border: none;
+    outline: none;
+    border: 1px solid $border-input-color;
+
+    &:focus {
+      border: 1px solid $border-focus-color;
+    }
+
+    &-area {
+      height: 200px;
+      resize: none;
+      padding-top: 10px;
+    }
+
+    &.valid {
+      border-color: $valid-color;
+    }
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  .adress,
+  .form,
+  .maps {
+    flex: 1 1 0px;
+    padding: 20px;
+  }
+
+  .form_button {
+    @include custom-button(100px, 50px, $basic-layout-color, $white-color);
+    @include transition(.4s);
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  iframe {
+    @include size(100%, 382px);
+  }
+}
+
+
+.alert {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  overflow: hidden;
+  @include font(14px, $white-color, null, 26px);
+  @include margin-padding(bottom, 20px, null, null);
+
+  li {
+    @include margin-padding(null, null, all, 10px);
+  }
+}
+
+.alert.invalid {
+  max-height: 140px;
+  transition: max-height .4s ease-in;
+  background: $error-color;
+}
+
+.alert.valid {
+  max-height: 140px;
+  transition: max-height .4s ease-in;
+  background: $valid-color;
+}
