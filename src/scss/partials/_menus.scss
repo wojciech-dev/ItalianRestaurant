@@ -56,7 +56,6 @@
           @include flex-direction(column);
         }
 
-
         .dish {
           flex-basis: 50%;
           @include margin-padding(null, null, all, 20px);

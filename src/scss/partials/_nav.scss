@@ -22,7 +22,6 @@
         @include font(18px, null, null);
       }
 
-
       &:before {
         content: "";
         @include position(absolute, $left: 0px, $bottom: -10px);
@@ -68,7 +67,5 @@
     @include media-queries(desktop, max) {
       top: 100px;
     }
-
-
   }
 }

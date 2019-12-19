@@ -28,7 +28,6 @@ nav_link.forEach(item => {
 $(".gallery a").simpleLightbox();
 
 //simple parralax
-
 const parallax = () =>
   (document.querySelector(".header").style.top =
     window.pageYOffset * 0.5 + "px");
