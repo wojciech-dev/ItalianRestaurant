@@ -1,6 +1,20 @@
-<h1>Website of an Italian restaurant</h1>
+# Restaurant website
+Italian restaurant website design. I used here the option of ES6 and webpack. A site without frameworks, only JS.
 
-<h5>Template static page without using frameworks. 
-Written to learn scss and webpack</h5>
+## Implemented functions:
+* Dynamic menu and news loaded from API (fetch)
+* Contact form with validation (no plugins)
+* CSSgrid gallery
+* Simple parralax effect and rwd
 
-<a href="http://itally.vot.pl/" target="_blank">preview online</a>
+## Use:
+* HTML/HTML5 (using BEM)
+* SCSS
+* JS / ES6
+* JQ (only lightbox gallery)
+* Webpack
+* Git
+
+## Demo online
+
+[Visit online](http://itally.vot.pl/)
