@@ -30,7 +30,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^3.1.0",
     "simplelightbox": "^1.17.3"
   }
 }
