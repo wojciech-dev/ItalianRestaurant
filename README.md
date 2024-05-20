@@ -15,9 +15,9 @@ Italian restaurant website design. I used here the option of ES6 and webpack. A 
 * Webpack
 * Git
 
-Preview site:
-<img src="https://build.byst.re/static/media/italy.jpg" alt="#">
-
 ## Demo online
 
-[Visit online](https://build.byst.re/)
+[Visit online](https://ruthos.github.io/itally.github.io/)
+
+Preview site:
+<img src="https://build.byst.re/static/media/italy.jpg" alt="#">
